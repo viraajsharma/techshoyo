@@ -206,7 +206,7 @@ export const siteConfig = {
     heading: "Built by students who ship.",
     storyParagraph1: "TechShoyo began in late-night study lounges and campus cafes at Christ University. As three Data Science and AI students, we spent our days analyzing algorithms and neural networks, but we realized that our real passion lay in turning abstract ideas into tangible, live digital products that people actually enjoy using.",
     storyParagraph2: "We noticed too many local businesses, student startups, and independent creators were stuck with bloated templates, slow load times, or agencies charging enterprise prices for basic sites. We set out to offer the antidote: honest craftsmanship, fast turnarounds, direct access to the developers writing your code, and high-performance websites that leave a lasting impression.",
-    badge: "BSc Data Science & AI, Christ University",
+    badge: "Based in India",
   },
 
   // ⚠️ FOUNDERS: REPLACE ROLES, BIOS, OR PHOTOS HERE
