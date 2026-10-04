@@ -135,7 +135,7 @@ export default function About() {
               {/* Institution Footnote */}
               <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>{founder.institution}</span>
-                <span className="text-zinc-600">Bangalore</span>
+                <span className="text-zinc-600">Delhi NCR</span>
               </div>
             </motion.div>
           ))}

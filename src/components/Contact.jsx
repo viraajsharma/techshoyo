@@ -140,7 +140,7 @@ export default function Contact() {
 
               <div className="mt-4 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>Average response: &lt; 24h</span>
-                <span>Bangalore (IST)</span>
+                <span>Delhi NCR (IST)</span>
               </div>
             </motion.div>
           </div>

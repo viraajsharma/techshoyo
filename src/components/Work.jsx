@@ -129,13 +129,13 @@ export default function Work() {
                     1. Drop your image into `public/images/projects/${project.id}.webp`
                     2. In `src/config.js`, set `thumbnail: "/images/projects/${project.id}.webp"`
                   */}
-                  <div className="relative flex-1 w-full overflow-hidden flex items-center justify-center p-6 group-hover:scale-[1.03] transition-transform duration-500 ease-out">
+                  <div className={`relative flex-1 w-full overflow-hidden flex items-center justify-center ${project.thumbnail ? 'p-0' : 'p-6'} group-hover:scale-[1.03] transition-transform duration-500 ease-out`}>
                     {project.thumbnail ? (
                       <img
                         src={project.thumbnail}
                         alt={`${project.title} screenshot`}
                         loading="lazy"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-center"
                       />
                     ) : (
                       /* Rich Dark Geometric Placeholder with monogram & mock UI structure */

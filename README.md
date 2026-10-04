@@ -1,6 +1,6 @@
 # TechShoyo — Web Agency Website
 
-A high-performance, dark-first, monochrome single-page agency website built for **TechShoyo**, founded by Viraaj, Ansh, and Suryansh (BSc Data Science and AI at Christ University).
+A high-performance, dark-first, monochrome single-page agency website built for **TechShoyo**, founded by Viraaj, Ansh, and Suryansh (BSc Data Science and AI at Christ University Delhi NCR).
 
 Built with **React + Vite + Tailwind CSS**, **Framer Motion**, and **Lenis** smooth scrolling.
 

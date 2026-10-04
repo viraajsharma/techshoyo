@@ -19,8 +19,8 @@ export const siteConfig = {
     tagline: "We build websites that make people stay.",
     subtext: "Websites, landing pages, link pages, and forms, designed and built by a team of three.",
     email: "techshoyo@techshoyo.me",
-    location: "Bangalore, India",
-    institution: "Christ University",
+    location: "Delhi NCR, India",
+    institution: "Christ University Delhi NCR",
     program: "BSc Data Science & AI",
     selectedWorkSubtitle: "Selected work from our team of three.",
     ctaPrimary: "View Our Work",
@@ -113,8 +113,7 @@ export const siteConfig = {
       tag: "Live Client Site",
       url: "https://forgeee.framer.website/",
       description: "Minimalist software studio showcase featuring tactile geometry, dark contrast, and precise typography.",
-      // ⚠️ REPLACE WITH REAL SCREENSHOT: Replace `null` with path e.g. "/images/projects/forge.webp"
-      thumbnail: null,
+      thumbnail: "/images/projects/forge.jpg",
       gradient: "from-zinc-900 via-neutral-900 to-black",
       badge: null,
       year: "2025",
@@ -126,8 +125,7 @@ export const siteConfig = {
       tag: "Live Site",
       url: "https://luminaaa.framer.website/",
       description: "Ambient lighting and creative product showcase featuring smooth tactile interactions and subtle luminescence.",
-      // ⚠️ REPLACE WITH REAL SCREENSHOT: Replace `null` with path e.g. "/images/projects/lumina.webp"
-      thumbnail: null,
+      thumbnail: "/images/projects/lumina.jpg",
       gradient: "from-neutral-900 via-stone-900 to-black",
       badge: null,
       year: "2025",
@@ -139,8 +137,7 @@ export const siteConfig = {
       tag: "Live Site",
       url: "https://47akm3133.wixsite.com/replate",
       description: "Clean digital storefront crafted to reduce food waste by connecting surplus meals with eco-conscious consumers.",
-      // ⚠️ REPLACE WITH REAL SCREENSHOT: Replace `null` with path e.g. "/images/projects/replate.webp"
-      thumbnail: null,
+      thumbnail: "/images/projects/replate.jpg",
       gradient: "from-zinc-900 via-zinc-950 to-black",
       badge: null,
       year: "2025",
@@ -152,9 +149,7 @@ export const siteConfig = {
       tag: "Concept Project",
       url: "https://voidrunners-landing.vercel.app",
       description: "Atmospheric sci-fi gaming universe landing hub with cybernetic dark gradients and sharp HUD elements.",
-      // ⚠️ REPLACE WITH REAL SCREENSHOT: Replace `null` with path e.g. "/images/projects/voidrunners.webp"
-      thumbnail: null,
-      gradient: "from-neutral-900 via-slate-950 to-black",
+      thumbnail: "/images/projects/voidrunners.jpg",
       badge: "Concept Project",
       year: "2026",
     },
@@ -165,8 +160,7 @@ export const siteConfig = {
       tag: "Concept Project",
       url: "https://lumen-dental-studio-kappa.vercel.app/",
       description: "Boutique dental clinic web experience with serene luxury aesthetics, treatment overviews, and appointment booking.",
-      // ⚠️ REPLACE WITH REAL SCREENSHOT: Replace `null` with path e.g. "/images/projects/lumen-dental.webp"
-      thumbnail: null,
+      thumbnail: "/images/projects/lumen-dental.jpg",
       gradient: "from-zinc-900 via-gray-950 to-black",
       badge: "Concept Project",
       year: "2026",
@@ -204,9 +198,9 @@ export const siteConfig = {
   // ABOUT STORY & FOUNDERS
   about: {
     heading: "Built by students who ship.",
-    storyParagraph1: "TechShoyo began in late-night study lounges and campus cafes at Christ University. As three Data Science and AI students, we spent our days analyzing algorithms and neural networks, but we realized that our real passion lay in turning abstract ideas into tangible, live digital products that people actually enjoy using.",
+    storyParagraph1: "TechShoyo began in late-night study lounges and campus cafes at Christ University Delhi NCR. As three Data Science and AI students, we spent our days analyzing algorithms and neural networks, but we realized that our real passion lay in turning abstract ideas into tangible, live digital products that people actually enjoy using.",
     storyParagraph2: "We noticed too many local businesses, student startups, and independent creators were stuck with bloated templates, slow load times, or agencies charging enterprise prices for basic sites. We set out to offer the antidote: honest craftsmanship, fast turnarounds, direct access to the developers writing your code, and high-performance websites that leave a lasting impression.",
-    badge: "BSc Data Science & AI, Christ University",
+    badge: "BSc Data Science & AI, Christ University Delhi NCR",
   },
 
   // ⚠️ FOUNDERS: REPLACE ROLES, BIOS, OR PHOTOS HERE
@@ -221,7 +215,7 @@ export const siteConfig = {
       // ⚠️ REPLACE WITH REAL PHOTO: Replace `null` with path e.g. "/images/founders/viraaj.jpg"
       photo: null,
       credentials: "BSc Data Science & AI",
-      institution: "Christ University",
+      institution: "Christ University Delhi NCR",
     },
     {
       id: "ansh",
@@ -233,7 +227,7 @@ export const siteConfig = {
       // ⚠️ REPLACE WITH REAL PHOTO: Replace `null` with path e.g. "/images/founders/ansh.jpg"
       photo: null,
       credentials: "BSc Data Science & AI",
-      institution: "Christ University",
+      institution: "Christ University Delhi NCR",
     },
     {
       id: "suryansh",
@@ -245,7 +239,7 @@ export const siteConfig = {
       // ⚠️ REPLACE WITH REAL PHOTO: Replace `null` with path e.g. "/images/founders/suryansh.jpg"
       photo: null,
       credentials: "BSc Data Science & AI",
-      institution: "Christ University",
+      institution: "Christ University Delhi NCR",
     },
   ],
 
