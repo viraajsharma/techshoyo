@@ -60,7 +60,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-xs font-medium tracking-wide text-zinc-300">
-            {siteConfig.about.badge}
+            {siteConfig.brand.heroBadge || "Operating"}
           </span>
         </motion.div>
 

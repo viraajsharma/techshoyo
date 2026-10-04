@@ -22,6 +22,7 @@ export const siteConfig = {
     location: "Delhi NCR, India",
     institution: "Christ University Delhi NCR",
     program: "BSc Data Science & AI",
+    heroBadge: "Operating",
     selectedWorkSubtitle: "Selected work from our team of three.",
     ctaPrimary: "View Our Work",
     ctaSecondary: "Get a Quote",
