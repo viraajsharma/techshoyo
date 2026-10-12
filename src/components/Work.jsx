@@ -4,8 +4,10 @@ import { siteConfig } from '../config';
 import { ExternalLink, ArrowUpRight, Sparkles, Monitor } from 'lucide-react';
 import TSMonogram from './TSMonogram';
 import { fadeUp, staggerContainer } from '../styles/animations';
+import { useRouter } from '../context/RouterContext';
 
 export default function Work() {
+  const { navigate } = useRouter();
   const [activeHoverId, setActiveHoverId] = useState(null);
   const [bubblePos, setBubblePos] = useState({ x: 0, y: 0 });
 
@@ -223,6 +225,46 @@ export default function Work() {
               </motion.div>
             );
           })}
+        </motion.div>
+
+        {/* Creative Design Archive Teaser Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 md:mt-16 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-zinc-950 via-[#0A0A0A] to-zinc-950 border border-white/[0.08] hover:border-white/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+        >
+          <div className="flex items-start sm:items-center gap-4">
+            <div className="p-3 rounded-xl bg-white/[0.05] border border-white/[0.08] text-red-400">
+              <Sparkles className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-mono uppercase tracking-widest text-red-400 font-semibold">
+                  Creative Portfolio
+                </span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-zinc-300">
+                  New
+                </span>
+              </div>
+              <p className="text-sm sm:text-base text-zinc-300 font-medium">
+                Looking for brand identities, logos, posters, typography & creative design?
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="/designs"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/designs');
+            }}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:scale-95 shrink-0"
+          >
+            <span>Explore Design Archive</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
         </motion.div>
       </div>
     </section>

@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import TSMonogram from './TSMonogram';
 import { siteConfig } from '../config';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { useRouter } from '../context/RouterContext';
 
 export default function Navbar() {
+  const { navigate, isDesignsPage } = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -55,6 +57,12 @@ export default function Navbar() {
     setButtonOffset({ x: 0, y: 0 });
   };
 
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    navigate(href);
+  };
+
   return (
     <>
       <motion.header
@@ -73,7 +81,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
           {/* Logo / Monogram + Wordmark */}
           <a
-            href="#"
+            href="/"
+            onClick={(e) => handleLinkClick(e, '/')}
             className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1"
             aria-label={`${siteConfig.brand.name} Home`}
           >
@@ -88,16 +97,36 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
-            {siteConfig.navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200 tracking-wide relative py-1 group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {siteConfig.navLinks.map((link) => {
+              const isDesignsLink = link.href === '/designs';
+              const isActive = isDesignsLink && isDesignsPage;
+
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className={`text-sm font-medium transition-colors duration-200 tracking-wide relative py-1 group flex items-center gap-1.5 ${
+                    isActive
+                      ? 'text-white font-semibold'
+                      : 'text-zinc-400 hover:text-white'
+                  }`}
+                >
+                  {/* Subtle red indicator for Designs when active */}
+                  {isDesignsLink && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
+                  )}
+                  <span>{link.label}</span>
+                  <span
+                    className={`absolute bottom-0 left-0 h-[1.5px] transition-all duration-300 ${
+                      isActive
+                        ? 'w-full bg-white'
+                        : 'w-0 bg-white group-hover:w-full'
+                    }`}
+                  />
+                </a>
+              );
+            })}
           </nav>
 
           {/* Right Action: Magnetic CTA */}
@@ -111,6 +140,7 @@ export default function Navbar() {
             >
               <a
                 href="#contact"
+                onClick={(e) => handleLinkClick(e, '#contact')}
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] active:scale-95"
               >
                 <span>{siteConfig.brand.navCta}</span>
@@ -142,25 +172,37 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl md:hidden pt-28 px-8 flex flex-col justify-between pb-12"
           >
             <div className="flex flex-col gap-6">
-              {siteConfig.navLinks.map((link, idx) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.05, duration: 0.3 }}
-                  className="text-2xl font-heading font-semibold text-zinc-300 hover:text-white border-b border-white/5 pb-3"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {siteConfig.navLinks.map((link, idx) => {
+                const isDesignsLink = link.href === '/designs';
+                const isActive = isDesignsLink && isDesignsPage;
+
+                return (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => handleLinkClick(e, link.href)}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.05, duration: 0.3 }}
+                    className={`text-2xl font-heading font-semibold border-b border-white/5 pb-3 flex items-center justify-between ${
+                      isActive ? 'text-white' : 'text-zinc-300 hover:text-white'
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {isDesignsLink && (
+                      <span className="text-xs font-mono uppercase px-2 py-0.5 rounded-full bg-red-950 text-red-400 border border-red-500/30">
+                        Archive
+                      </span>
+                    )}
+                  </motion.a>
+                );
+              })}
             </div>
 
             <div className="flex flex-col gap-4">
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#contact')}
                 className="w-full py-3.5 rounded-full bg-white text-black font-semibold text-center text-sm tracking-wider uppercase"
               >
                 {siteConfig.brand.navCta}
