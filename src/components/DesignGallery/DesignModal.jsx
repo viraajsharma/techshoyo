@@ -84,7 +84,7 @@ export default function DesignModal({
           {/* Top Modal Navigation Header */}
           <div className="flex items-center justify-between px-5 sm:px-7 py-4 border-b border-white/[0.08] bg-black/60 backdrop-blur-md">
             <div className="flex items-center gap-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-red-400 font-semibold">
+              <span className="text-xs font-mono uppercase tracking-widest text-blue-400 font-semibold">
                 {project.categoryLabel}
               </span>
               <span className="text-zinc-600">•</span>
@@ -172,8 +172,8 @@ export default function DesignModal({
                       Client Project
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-red-950/50 text-red-300 border border-red-500/30">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-blue-950/50 text-blue-300 border border-blue-500/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
                       Studio Template
                     </span>
                   )}
@@ -217,7 +217,7 @@ export default function DesignModal({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {project.deliverables.map((item, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-xs text-zinc-300">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -250,7 +250,7 @@ export default function DesignModal({
                 <a
                   href="#contact"
                   onClick={onClose}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 shadow-[0_0_20px_rgba(255,255,255,0.2)] active:scale-95 text-center"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(37,99,235,0.6)] active:scale-95 text-center"
                 >
                   <span>Request Similar Design</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

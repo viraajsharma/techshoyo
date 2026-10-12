@@ -13,7 +13,7 @@ export default function DesignCard({ project, onClick }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative rounded-2xl bg-[#0A0A0A] border border-white/[0.08] hover:border-white/30 transition-all duration-300 overflow-hidden flex flex-col cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+      className="group relative rounded-2xl bg-[#0A0A0A] border border-white/[0.08] hover:border-blue-500/40 hover:shadow-[0_0_25px_rgba(59,130,246,0.12)] transition-all duration-300 overflow-hidden flex flex-col cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
       onClick={() => onClick(project)}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -60,8 +60,8 @@ export default function DesignCard({ project, onClick }) {
               Client Project
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/70 backdrop-blur-md text-zinc-300 border border-white/10">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/70 backdrop-blur-md text-blue-200 border border-blue-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_6px_#3B82F6]" />
               Studio Showcase
             </span>
           )}
@@ -77,7 +77,7 @@ export default function DesignCard({ project, onClick }) {
           <div className="w-full flex items-center justify-between text-white">
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white">
               <span>Inspect Artwork</span>
-              <Maximize2 className="w-3.5 h-3.5 text-red-400" />
+              <Maximize2 className="w-3.5 h-3.5 text-blue-400" />
             </span>
             <span className="text-[11px] font-mono text-zinc-400">
               TechShoyo
@@ -91,7 +91,7 @@ export default function DesignCard({ project, onClick }) {
         <div>
           {/* Category Eyebrow & Tag */}
           <div className="flex items-center justify-between gap-2 mb-2">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-red-400/90 font-medium">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-blue-400 font-semibold">
               {project.categoryLabel}
             </span>
             {project.tags && project.tags[0] && (
@@ -117,7 +117,7 @@ export default function DesignCard({ project, onClick }) {
           <span className="text-[11px] font-mono text-zinc-500">
             {project.deliverables ? `${project.deliverables.length} Deliverables` : 'Design Asset'}
           </span>
-          <span className="inline-flex items-center gap-1 text-[11px] font-medium text-zinc-400 group-hover:text-white transition-colors">
+          <span className="inline-flex items-center gap-1 text-[11px] font-medium text-zinc-400 group-hover:text-blue-400 transition-colors">
             <span>View Full Details</span>
             <ArrowUpRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </span>

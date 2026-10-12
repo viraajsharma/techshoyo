@@ -24,8 +24,8 @@ export default {
           strong: 'var(--border-strong, rgba(255, 255, 255, 0.25))',
         },
         accent: {
-          DEFAULT: 'var(--accent-color, #FAFAFA)',
-          glow: 'var(--accent-glow, rgba(255, 255, 255, 0.15))',
+          DEFAULT: 'var(--accent-color, #3B82F6)',
+          glow: 'var(--accent-glow, rgba(59, 130, 246, 0.4))',
         }
       },
       fontFamily: {

@@ -31,20 +31,20 @@ export const siteConfig = {
     logoPng: "/logo-transparent.png",
   },
 
-  // CSS VARIABLES / COLOR THEME (Dark-first, Monochrome, Expandable)
+  // CSS VARIABLES / COLOR THEME (Dark-first, Monochrome + Electric Blue Accent)
   theme: {
     cssVariables: {
       "--bg-black": "#000000",
       "--bg-card": "#0A0A0A",
-      "--bg-elevated": "#111111",
+      "--bg-elevated": "#0B0F19",
       "--text-white": "#FAFAFA",
       "--text-muted": "#A1A1A1",
       "--text-subtle": "#6B6B6B",
       "--border-subtle": "rgba(255, 255, 255, 0.08)",
-      "--border-medium": "rgba(255, 255, 255, 0.14)",
-      "--border-strong": "rgba(255, 255, 255, 0.28)",
-      "--accent-color": "#FAFAFA", /* Customize to add a subtle colored accent later, e.g. #3B82F6 or #10B981 */
-      "--accent-glow": "rgba(255, 255, 255, 0.12)",
+      "--border-medium": "rgba(59, 130, 246, 0.22)",
+      "--border-strong": "rgba(59, 130, 246, 0.45)",
+      "--accent-color": "#3B82F6",
+      "--accent-glow": "rgba(37, 99, 235, 0.4)",
     },
   },
 

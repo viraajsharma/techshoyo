@@ -63,7 +63,7 @@ function MainAppShell() {
 }
 
 export default function App() {
-  const [preloaderFinished, setPreloaderFinished] = useState(false);
+  const [_preloaderFinished, setPreloaderFinished] = useState(false);
 
   return (
     <RouterProvider>

@@ -32,7 +32,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs uppercase tracking-widest text-zinc-500 font-mono block mb-3"
+            className="text-xs uppercase tracking-widest text-blue-500 font-mono block mb-3 font-semibold"
           >
             // EXECUTION PIPELINE
           </motion.span>
@@ -62,7 +62,7 @@ export default function Process() {
           <div className="hidden md:block absolute left-8 top-10 bottom-10 w-[2px] bg-white/[0.08]">
             <motion.div
               style={{ scaleY: lineHeight }}
-              className="w-full h-full bg-white origin-top shadow-[0_0_12px_rgba(255,255,255,0.7)]"
+              className="w-full h-full bg-blue-500 origin-top shadow-[0_0_12px_rgba(59,130,246,0.8)]"
             />
           </div>
 

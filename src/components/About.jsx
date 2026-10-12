@@ -17,9 +17,9 @@ export default function About() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-zinc-400 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/25 bg-blue-950/30 text-xs font-mono text-blue-300 mb-6 shadow-[0_0_15px_rgba(59,130,246,0.12)]"
           >
-            <GraduationCap className="w-3.5 h-3.5 text-zinc-300" />
+            <GraduationCap className="w-3.5 h-3.5 text-blue-400" />
             <span>{siteConfig.about.badge}</span>
           </motion.div>
 

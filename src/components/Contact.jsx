@@ -73,7 +73,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-xs uppercase tracking-widest text-zinc-500 font-mono block mb-3"
+                className="text-xs uppercase tracking-widest text-blue-500 font-mono block mb-3 font-semibold"
               >
                 // START A CONVERSATION
               </motion.span>
@@ -305,14 +305,14 @@ export default function Contact() {
                       )}
                     </div>
 
-                    {/* Submit Button: Solid White, Hover Inversion */}
+                    {/* Submit Button: Electric Blue with hover glow */}
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 rounded-full bg-white text-black font-semibold text-sm tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white hover:border-white border border-transparent flex items-center justify-center gap-2 group active:scale-95 disabled:opacity-50"
+                      className="w-full py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(37,99,235,0.6)] hover:shadow-[0_0_35px_rgba(59,130,246,0.8)] flex items-center justify-center gap-2 group active:scale-95 disabled:opacity-50"
                     >
                       {isSubmitting ? (
-                        <span className="inline-block w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                        <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <>
                           <span>Send Inquiry</span>

@@ -56,7 +56,7 @@ export default function WhyUs() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs uppercase tracking-widest text-zinc-500 font-mono block mb-3"
+            className="text-xs uppercase tracking-widest text-blue-500 font-mono block mb-3 font-semibold"
           >
             // THE TECHSHOYO ADVANTAGE
           </motion.span>

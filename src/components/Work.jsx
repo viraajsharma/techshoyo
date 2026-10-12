@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { siteConfig } from '../config';
-import { ExternalLink, ArrowUpRight, Sparkles, Monitor } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import TSMonogram from './TSMonogram';
 import { fadeUp, staggerContainer } from '../styles/animations';
 import { useRouter } from '../context/RouterContext';
@@ -34,7 +34,7 @@ export default function Work() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xs uppercase tracking-widest text-zinc-500 font-mono block mb-3"
+              className="text-xs uppercase tracking-widest text-blue-500 font-mono block mb-3 font-semibold"
             >
               // PORTFOLIO & CASE STUDIES
             </motion.span>
@@ -233,18 +233,18 @@ export default function Work() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12 md:mt-16 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-zinc-950 via-[#0A0A0A] to-zinc-950 border border-white/[0.08] hover:border-white/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+          className="mt-12 md:mt-16 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-zinc-950 via-[#0A0A0A] to-blue-950/20 border border-blue-500/25 hover:border-blue-500/50 shadow-[0_0_25px_rgba(59,130,246,0.08)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-6"
         >
           <div className="flex items-start sm:items-center gap-4">
-            <div className="p-3 rounded-xl bg-white/[0.05] border border-white/[0.08] text-red-400">
+            <div className="p-3 rounded-xl bg-blue-950/40 border border-blue-500/25 text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-mono uppercase tracking-widest text-red-400 font-semibold">
+                <span className="text-xs font-mono uppercase tracking-widest text-blue-400 font-semibold">
                   Creative Portfolio
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-zinc-300">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
                   New
                 </span>
               </div>
@@ -260,7 +260,7 @@ export default function Work() {
               e.preventDefault();
               navigate('/designs');
             }}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:scale-95 shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(37,99,235,0.5)] hover:shadow-[0_0_35px_rgba(59,130,246,0.7)] active:scale-95 shrink-0"
           >
             <span>Explore Design Archive</span>
             <ArrowUpRight className="w-4 h-4" />

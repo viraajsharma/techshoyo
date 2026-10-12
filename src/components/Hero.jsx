@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import TSMonogram from './TSMonogram';
 import { siteConfig } from '../config';
-import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
   const headlineWords = siteConfig.brand.tagline.split(" ");
@@ -51,15 +51,15 @@ export default function Hero() {
 
       {/* Main Hero Content */}
       <div className="max-w-6xl mx-auto px-6 md:px-10 text-center flex flex-col items-center z-10 my-auto">
-        {/* Student Agency Badge */}
+        {/* Operating Agency Badge */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md mb-8 hover:border-white/20 transition-colors"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/25 bg-blue-950/30 backdrop-blur-md mb-8 hover:border-blue-500/45 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.15)]"
         >
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs font-medium tracking-wide text-zinc-300">
+          <span className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3B82F6] animate-pulse" />
+          <span className="text-xs font-medium tracking-wide text-zinc-200">
             {siteConfig.brand.heroBadge || "Operating"}
           </span>
         </motion.div>
@@ -101,19 +101,19 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
         >
-          {/* Primary Button: Solid white with black text, hover inversion */}
+          {/* Primary Button: Glowing Electric Blue Button (Matches Screenshot 2) */}
           <a
             href="#work"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-black hover:text-white hover:border-white border border-transparent shadow-[0_0_25px_rgba(255,255,255,0.2)] active:scale-95 text-center flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold text-sm tracking-wide transition-all duration-300 shadow-[0_0_35px_rgba(37,99,235,0.7)] hover:shadow-[0_0_45px_rgba(59,130,246,0.9)] active:scale-95 text-center flex items-center justify-center gap-2 group"
           >
             <span>{siteConfig.brand.ctaPrimary}</span>
             <ArrowDown className="w-4 h-4 transition-transform duration-200 group-hover:translate-y-0.5" />
           </a>
 
-          {/* Secondary Button: Transparent with thin white border, hover inversion */}
+          {/* Secondary Button: Subtle dark pill with border */}
           <a
             href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent text-white font-semibold text-sm tracking-wide border border-white/20 transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-95 text-center flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white/[0.03] text-white font-semibold text-sm tracking-wide border border-white/20 transition-all duration-300 hover:bg-white/[0.08] hover:border-blue-500/40 active:scale-95 text-center flex items-center justify-center gap-2 group"
           >
             <span>{siteConfig.brand.ctaSecondary}</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

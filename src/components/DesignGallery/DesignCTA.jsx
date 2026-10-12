@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Mail, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import { siteConfig } from '../../config';
 
 export default function DesignCTA({ onStartProjectClick }) {
   return (
     <section id="design-cta" className="py-24 md:py-36 relative border-t border-white/[0.08] overflow-hidden bg-black">
-      {/* Background Architectural Grid & Subtle Red Glow */}
+      {/* Background Architectural Grid & Subtle Electric Blue Glow */}
       <div className="absolute inset-0 bg-tech-grid opacity-40 pointer-events-none" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/[0.04] blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/[0.08] blur-[130px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10 text-center">
         <motion.div
@@ -19,9 +19,9 @@ export default function DesignCTA({ onStartProjectClick }) {
           className="max-w-3xl mx-auto"
         >
           {/* Eyebrow Label */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/[0.08] border border-blue-500/20 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.9)]" />
+            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-blue-400">
               NEXT STEPS & COLLABORATION
             </span>
           </div>
@@ -41,7 +41,7 @@ export default function DesignCTA({ onStartProjectClick }) {
             <a
               href="#contact"
               onClick={onStartProjectClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] active:scale-95 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 shadow-[0_0_35px_rgba(37,99,235,0.7)] active:scale-95 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -49,9 +49,9 @@ export default function DesignCTA({ onStartProjectClick }) {
 
             <a
               href={`mailto:${siteConfig.brand.email}?subject=Creative%20Design%20Inquiry%20—%20Techshoyo`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/[0.12] hover:border-white/30 font-medium text-xs tracking-wider uppercase transition-all duration-300 active:scale-95 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/[0.12] hover:border-blue-500/30 font-medium text-xs tracking-wider uppercase transition-all duration-300 active:scale-95 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              <Mail className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" />
+              <Mail className="w-4 h-4 text-zinc-400 group-hover:text-blue-400 transition-colors" />
               <span>{siteConfig.brand.email}</span>
             </a>
           </div>
@@ -63,7 +63,7 @@ export default function DesignCTA({ onStartProjectClick }) {
               <span>Direct Founder Collaboration</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(59,130,246,0.8)]" />
               <span>Tailored Visual Identity Systems</span>
             </div>
             <div className="flex items-center gap-2">

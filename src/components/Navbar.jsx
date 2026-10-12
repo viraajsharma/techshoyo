@@ -108,20 +108,20 @@ export default function Navbar() {
                   onClick={(e) => handleLinkClick(e, link.href)}
                   className={`text-sm font-medium transition-colors duration-200 tracking-wide relative py-1 group flex items-center gap-1.5 ${
                     isActive
-                      ? 'text-white font-semibold'
+                      ? 'text-blue-400 font-semibold'
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
-                  {/* Subtle red indicator for Designs when active */}
+                  {/* Subtle electric blue indicator for Designs when active */}
                   {isDesignsLink && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block shadow-[0_0_8px_#3B82F6]" />
                   )}
                   <span>{link.label}</span>
                   <span
-                    className={`absolute bottom-0 left-0 h-[1.5px] transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${
                       isActive
-                        ? 'w-full bg-white'
-                        : 'w-0 bg-white group-hover:w-full'
+                        ? 'w-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]'
+                        : 'w-0 bg-blue-500 group-hover:w-full'
                     }`}
                   />
                 </a>
@@ -141,7 +141,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, '#contact')}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] active:scale-95"
               >
                 <span>{siteConfig.brand.navCta}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -152,7 +152,7 @@ export default function Navbar() {
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-zinc-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-md"
+            className="md:hidden p-2 text-zinc-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -185,12 +185,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.05, duration: 0.3 }}
                     className={`text-2xl font-heading font-semibold border-b border-white/5 pb-3 flex items-center justify-between ${
-                      isActive ? 'text-white' : 'text-zinc-300 hover:text-white'
+                      isActive ? 'text-blue-400' : 'text-zinc-300 hover:text-white'
                     }`}
                   >
                     <span>{link.label}</span>
                     {isDesignsLink && (
-                      <span className="text-xs font-mono uppercase px-2 py-0.5 rounded-full bg-red-950 text-red-400 border border-red-500/30">
+                      <span className="text-xs font-mono uppercase px-2 py-0.5 rounded-full bg-blue-950 text-blue-400 border border-blue-500/30">
                         Archive
                       </span>
                     )}
@@ -203,7 +203,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, '#contact')}
-                className="w-full py-3.5 rounded-full bg-white text-black font-semibold text-center text-sm tracking-wider uppercase"
+                className="w-full py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-center text-sm tracking-wider uppercase shadow-[0_0_20px_rgba(37,99,235,0.4)]"
               >
                 {siteConfig.brand.navCta}
               </a>

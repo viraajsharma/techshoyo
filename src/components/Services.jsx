@@ -22,7 +22,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xs uppercase tracking-widest text-zinc-500 font-mono block mb-3"
+              className="text-xs uppercase tracking-widest text-blue-500 font-mono block mb-3 font-semibold"
             >
               // SERVICES & CAPABILITIES
             </motion.span>
@@ -55,7 +55,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
         >
-          {siteConfig.services.map((service, index) => {
+          {siteConfig.services.map((service) => {
             const IconComponent = iconMap[service.icon] || Code2;
 
             return (
@@ -64,27 +64,27 @@ export default function Services() {
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative p-8 md:p-10 rounded-2xl bg-[#0A0A0A] border border-white/[0.08] hover:border-white/30 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+                className="group relative p-8 md:p-10 rounded-2xl bg-[#0A0A0A] border border-blue-500/20 hover:border-blue-500/60 shadow-[0_0_20px_rgba(59,130,246,0.06)] hover:shadow-[0_0_30px_rgba(59,130,246,0.22)] transition-all duration-300 overflow-hidden flex flex-col justify-between"
               >
-                {/* Subtle White Border Glow Sweep on Hover */}
+                {/* Subtle Blue Border Glow Sweep on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -inset-[100%] bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(255,255,255,0.08),transparent_50%)]" />
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.03] blur-2xl rounded-full" />
+                  <div className="absolute -inset-[100%] bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(59,130,246,0.12),transparent_50%)]" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/[0.08] blur-2xl rounded-full" />
                 </div>
 
                 {/* Subtle corner tech accent */}
                 <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden pointer-events-none">
-                  <div className="absolute top-0 right-0 w-[1px] h-4 bg-white/20" />
-                  <div className="absolute top-0 right-0 w-4 h-[1px] bg-white/20" />
+                  <div className="absolute top-0 right-0 w-[1px] h-4 bg-blue-500/40" />
+                  <div className="absolute top-0 right-0 w-4 h-[1px] bg-blue-500/40" />
                 </div>
 
                 <div>
                   {/* Top Row: Icon + Number */}
                   <div className="flex items-center justify-between mb-8">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-blue-950/30 border border-blue-500/25 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.1)]">
                       <IconComponent className="w-5 h-5 stroke-[1.5]" />
                     </div>
-                    <span className="font-mono text-xs text-zinc-500 font-semibold tracking-wider">
+                    <span className="font-mono text-xs text-blue-500 font-semibold tracking-wider">
                       {service.number}
                     </span>
                   </div>
@@ -98,17 +98,17 @@ export default function Services() {
                   </p>
                 </div>
 
-                {/* Footer details row */}
+                {/* Footer details row matching Screenshot 1 */}
                 <div className="pt-6 border-t border-white/[0.06] flex items-center justify-between">
-                  <span className="text-xs text-zinc-500">
+                  <span className="text-xs text-blue-400/90 font-medium">
                     {service.details}
                   </span>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-300 group-hover:text-white transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-white hover:text-blue-400 transition-colors"
                   >
                     <span>Inquire</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-blue-400" />
                   </a>
                 </div>
               </motion.div>
